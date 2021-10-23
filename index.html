@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sneakers Shop</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__menu" src="images/icon-menu.svg" alt="">
+        <img class="header__logo" src="images/logo.svg" alt="">
+        <box-icon onclick="showOnClick()" class="header__icon" name="cart"></box-icon>
+        <img class="header__avatar" src="images/image-avatar.png" alt="">
+    </header>
+    <div class="hero">
+        <div id="cart">
+            <div class="cart__heading-div">
+                <p class="cart__heading">Cart</p>
+            </div>
+            <div class="cart__items-div">
+                <p class="cart__text" >Your Cart is Empty</p>
+            </div>
+        </div>
+        <img class="hero__image" src="images/image-product-1.jpg" alt="An image of sneakers.">
+        <img class="hero__chevron chevron-one" src="images/icon-previous.svg" alt="">
+        <img class="hero__chevron chevron-two" src="images/icon-next.svg" alt="">
+    </div>
+    <article class="main">
+        <section class="body"></section>
+        <p class="main__tagline">SNEAKER COMPANY</p>
+        <h1 class="main__heading">Fall Limited Edition Sneaker</h1>
+        <p class="main__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero doloribus, exercitationem impedit iusto illum error aut nisi! Id adipisci maiores omnis. Optio natus odit expedita!</p>
+        <section class="price-section">
+            <p class="price-section__price">$125.00</p>
+            <p class="price-section__discount">50%</p>
+            <p class="price-section__old-price">$250.00</p>
+            <div class="main__cart">
+                <div class="cart-amount">
+                    <img id="minus-icon" onclick="decrement()" class="cart__img cart__minus" src="images/icon-minus.svg" alt="">
+                    <p id="counter-placeholder" class="cart-amount__amount">1</p>
+                    <img id="plus-icon" onclick="increment()" class="cart__img cart__plus" src="images/icon-plus.svg" alt="">
+                </div>
+                <button class="btn btn__cart"><box-icon class="cart-icon" name="cart"></box-icon><p class="btn__text">Add to Cart</p></button>
+            </div>
+        </section>
+    </article>
+    <script src="/main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+</body>
+</html>
