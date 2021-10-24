@@ -7,6 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Sneakers Shop</title>
 </head>
@@ -16,8 +21,6 @@
         <img class="header__logo" src="images/logo.svg" alt="">
         <box-icon onclick="showOnClick()" class="header__icon" name="cart"></box-icon>
         <img class="header__avatar" src="images/image-avatar.png" alt="">
-    </header>
-    <div class="hero">
         <div id="cart">
             <div class="cart__heading-div">
                 <p class="cart__heading">Cart</p>
@@ -25,11 +28,46 @@
             <div class="cart__items-div">
                 <p class="cart__text" >Your Cart is Empty</p>
             </div>
-        </div>
+    </header>
+    <div class="hero">
+        <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
         <img class="hero__image" src="images/image-product-1.jpg" alt="An image of sneakers.">
-        <img class="hero__chevron chevron-one" src="images/icon-previous.svg" alt="">
-        <img class="hero__chevron chevron-two" src="images/icon-next.svg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="hero__image" src="images/image-product-2.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/image-product-3.jpg" alt="" class="hero__image">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/image-product-4.jpg" alt="" class="hero__image">
+      </div>
+      ...
     </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button swiper-button-prev"></div>
+    <div class="swiper-button swiper-button-next"></div>
+    
+  </div>
+    
+    
+          
+    
+          
+    
+          
+
+          
+    </div>
+        </div>
     <article class="main">
         <section class="body"></section>
         <p class="main__tagline">SNEAKER COMPANY</p>
@@ -41,9 +79,9 @@
             <p class="price-section__old-price">$250.00</p>
             <div class="main__cart">
                 <div class="cart-amount">
-                    <img id="minus-icon" onclick="decrement()" class="cart__img cart__minus" src="images/icon-minus.svg" alt="">
-                    <p id="counter-placeholder" class="cart-amount__amount">1</p>
-                    <img id="plus-icon" onclick="increment()" class="cart__img cart__plus" src="images/icon-plus.svg" alt="">
+                    <p id="counter-label" class="cart-amount__amount">1</p>
+                    <button id="button-plus" class="btn-cart" onclick="increment()"></button>
+                    <button id="button-minus" class="btn-cart" onclick="decrement()"></button>
                 </div>
                 <button class="btn btn__cart"><box-icon class="cart-icon" name="cart"></box-icon><p class="btn__text">Add to Cart</p></button>
             </div>
