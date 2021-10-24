@@ -12,82 +12,83 @@
   href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
 />
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+<script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="https://unpkg.com/codyhouse-framework/main/assets/css/style.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Sneakers Shop</title>
 </head>
 <body>
-    <header class="header">
-        <img class="header__menu" src="images/icon-menu.svg" alt="">
-        <img class="header__logo" src="images/logo.svg" alt="">
-        <box-icon onclick="showOnClick()" class="header__icon" name="cart"></box-icon>
-        <img class="header__avatar" src="images/image-avatar.png" alt="">
-        <div id="cart">
-            <div class="cart__heading-div">
-                <p class="cart__heading">Cart</p>
-            </div>
-            <div class="cart__items-div">
-                <p class="cart__text" >Your Cart is Empty</p>
-            </div>
-    </header>
-    <div class="hero">
-        <!-- Slider main container -->
-<div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <img class="hero__image" src="images/image-product-1.jpg" alt="An image of sneakers.">
-      </div>
-      <div class="swiper-slide">
-        <img class="hero__image" src="images/image-product-2.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/image-product-3.jpg" alt="" class="hero__image">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/image-product-4.jpg" alt="" class="hero__image">
-      </div>
-      ...
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-  
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button swiper-button-prev"></div>
-    <div class="swiper-button swiper-button-next"></div>
-    
-  </div>
-    
-    
-          
-    
-          
-    
-          
-
-          
-    </div>
+  <header class="header">
+    <img class="header__menu" src="images/icon-menu.svg" alt="">
+    <img class="header__logo" src="images/logo.svg" alt="">
+    <box-icon onclick="showOnClick()" class="header__icon" name="cart"></box-icon>
+    <img class="header__avatar" src="images/image-avatar.png" alt="">
+    <div id="cart">
+        <div class="cart__heading-div">
+            <p class="cart__heading">Cart</p>
         </div>
-    <article class="main">
-        <section class="body"></section>
-        <p class="main__tagline">SNEAKER COMPANY</p>
-        <h1 class="main__heading">Fall Limited Edition Sneaker</h1>
-        <p class="main__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero doloribus, exercitationem impedit iusto illum error aut nisi! Id adipisci maiores omnis. Optio natus odit expedita!</p>
-        <section class="price-section">
-            <p class="price-section__price">$125.00</p>
-            <p class="price-section__discount">50%</p>
-            <p class="price-section__old-price">$250.00</p>
-            <div class="main__cart">
-                <div class="cart-amount">
-                    <p id="counter-label" class="cart-amount__amount">1</p>
-                    <button id="button-plus" class="btn-cart" onclick="increment()"></button>
-                    <button id="button-minus" class="btn-cart" onclick="decrement()"></button>
-                </div>
-                <button class="btn btn__cart"><box-icon class="cart-icon" name="cart"></box-icon><p class="btn__text">Add to Cart</p></button>
-            </div>
-        </section>
-    </article>
+        <div class="cart__items-div">
+            <p class="cart__text" >Your Cart is Empty</p>
+        </div>
+</header>
+  <div class="grid">
+    <div class="grid-column-one">
+      <div class="hero">
+          <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img class="hero__image" src="images/image-product-1.jpg" alt="An image of sneakers.">
+        </div>
+        <div class="swiper-slide">
+          <img class="hero__image" src="images/image-product-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/image-product-3.jpg" alt="" class="hero__image">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/image-product-4.jpg" alt="" class="hero__image">
+        </div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button swiper-button-prev"></div>
+      <div class="swiper-button swiper-button-next"></div>
+      
+    </div>
+      </div>
+          </div>
+<div class="grid-column-two">
+  <article class="main">
+      <section class="body"></section>
+      <p class="main__tagline">SNEAKER COMPANY</p>
+      <h1 class="main__heading">Fall Limited Edition Sneaker</h1>
+      <p class="main__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero doloribus, exercitationem impedit iusto illum error aut nisi! Id adipisci maiores omnis. Optio natus odit expedita!</p>
+      <section class="price-section">
+          <p class="price-section__price">$125.00</p>
+          <p class="price-section__discount">50%</p>
+          <p class="price-section__old-price">$250.00</p>
+          <div class="main__cart">
+              <div class="cart-amount">
+                  <p id="counter-label" class="cart-amount__amount">1</p>
+                  <button id="button-plus" class="btn-cart" onclick="increment()"></button>
+                  <button id="button-minus" class="btn-cart" onclick="decrement()"></button>
+              </div>
+              <button class="btn btn__cart cd-add-to-cart js-cd-add-to-cart"><box-icon class="cart-icon" name="cart"></box-icon><p class="btn__text">Add to Cart</p></button>
+          </div>
+      </section>
+  </article>
+  </div>
+  </div>
+</div>
     <script src="/main.js"></script>
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
 </body>
 </html>

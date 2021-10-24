@@ -1,3 +1,6 @@
+@import '../../../node_modules/codyhouse-framework/main/assets/css/base';
+@import '/_custom-style.scss';
+@import '/base.scss';
 /* Basic */
 *,*::after,*::before {
     box-sizing: border-box;
@@ -33,7 +36,7 @@ img {
     --paragraph-font-size: 1.6rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 658px) {
     :root {
         --h1-font-size: 3.247rem;
         --h2-font-size: 2.887rem;
@@ -210,7 +213,7 @@ p {
     font-weight: bold;
     font-size: calc(var(--paragraph-font-size) - 0.2rem);
     position: relative;
-    top: -0.7rem;
+    top: -0.1rem;
 }
 
 .cart-icon {    
@@ -219,7 +222,8 @@ p {
     fill: white;
     padding-right: 1rem;
     position: relative;
-    top: 0.3rem;
+    top: -0.3rem;
+    display: inline-block;
 }
 
 #button-plus {
@@ -244,12 +248,14 @@ p {
 
 #button-minus {
     background-image: url(/images/icon-minus.svg);
+    display: inline-block;
     position: absolute;
-    right: 52rem;
+    right: 1rem; 
     left: 1.5rem;
-    top: 50%;
-    z-index: 69;
-    width: 18px;
+    top: 45%;
+    z-index: 120;
+    width: 18px;  
+    border: 1px solid var(--primary-color);
 }
 
 /* Header */
@@ -338,3 +344,149 @@ p {
 .swiper-button {
     color: white;
 }
+
+/* Function Add to Cart */
+.cd-cart__trigger,
+.cd-cart__content {
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  transition: transform .2s;
+}
+
+.cd-cart--empty .cd-cart__trigger,
+.cd-cart--empty .cd-cart__content { /* Hide cart */
+  transform: translateY(150px);
+}
+
+.cd-cart__layout {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    overflow: hidden;
+    height: 72px;
+    width: 72px;
+    border-radius: var(--radius);
+    transition: height .4s .1s, width  .4s .1s, box-shadow .3s;
+    transition-timing-function: cubic-bezier(.67,.17,.32,.95);
+    background: var(--cd-color-3);
+    box-shadow: 0 4px 30px rgba(#000, .17);
+  }
+  
+  .cd-cart--open .cd-cart__layout {
+    height: 100%;
+    width: 100%;
+    transition-delay: 0s;
+  }
+
+  .cd-cart__product--deleted { 
+    position: absolute;
+    left: 0;
+    width: 100%; 
+    opacity: 0;
+    animation: cd-item-slide-out .3s forwards;
+  }
+  
+  @keyframes cd-item-slide-out {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(80px);
+      opacity: 0;
+    }
+  }
+
+  @media screen and (min-width: 658px) {
+
+  }
+
+  /* Cart */
+  /* -------------------------------- 
+
+File#: _2_cart-drawer
+Title: Cart Drawer
+Descr: A cart template in a drawer panel
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.dr-cart__product {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    grid-gap: var(--space-xs);
+    align-items: start;
+    padding: var(--space-sm) 0;
+  }
+  .dr-cart__product:not(:last-child) {
+    border-bottom: 1px solid var(--color-contrast-lower);
+  }
+  
+  .dr-cart__img {
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    transition: 0.2s;
+  }
+  .dr-cart__img img {
+    display: block;
+  }
+  .dr-cart__img:hover {
+    opacity: 0.85;
+  }
+  
+  .dr-cart__select {
+    --select-icon-size: 0.85em;
+    --select-icon-right-margin: var(--space-xxs);
+    font-size: 0.875em;
+    width: 3.6em;
+  }
+  .dr-cart__select .select__input {
+    padding: var(--space-xxxxs) var(--space-xxxs);
+  }
+  
+  .dr-cart__remove-btn {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    line-height: inherit;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    cursor: pointer;
+  }
+  .dr-cart__remove-btn:hover {
+    text-decoration: underline;
+  }
+  .dr-cart__remove-btn:focus {
+    outline: 2px solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+    outline-offset: 2px;
+  }
+
+  .cd-cart__trigger,
+.cd-cart__content {
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  transition: transform .2s;
+}
+
+
+@media screen and (min-width: 937px) {
+    /* Grid */
+    .grid {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+/* Nav */
+
