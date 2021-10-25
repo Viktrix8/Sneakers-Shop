@@ -208,6 +208,11 @@ p {
     cursor: pointer;
 }
 
+.swiper-button:focus {
+    outline: 0;
+    border: 0;
+}
+
 .btn__text {
     color: white;
     font-weight: bold;
