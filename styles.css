@@ -263,8 +263,13 @@ p {
     left: 1.5rem;
     top: 45%;
     z-index: 120;
-    width: 18px;  
     border: 1px solid var(--primary-color);
+}
+
+.minus-div {
+    height: 100%;
+
+    width: 30%;
 }
 
 /* Header */
