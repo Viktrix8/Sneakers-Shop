@@ -59,3 +59,11 @@ function hideNav() {
     let x = document.getElementById('header-nav');
     x.style.display = 'none';
 }
+
+function showCart() {
+    let x = document.getElementById('cart');
+    if (x.style.display === 'none')
+        x.style.display = 'block';
+    else
+        x.style.display = 'none'
+}
