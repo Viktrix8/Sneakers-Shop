@@ -49,3 +49,13 @@ const swiper = new Swiper('.swiper', {
 
 // Nav
 
+function showNav() {
+    let x = document.getElementById('header-nav');
+    x.style.display = 'block';
+
+}
+
+function hideNav() {
+    let x = document.getElementById('header-nav');
+    x.style.display = 'none';
+}

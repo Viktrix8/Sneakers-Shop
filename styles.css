@@ -213,6 +213,10 @@ p {
     border: 0;
 }
 
+.swiper-button {
+    color: white;
+}
+
 .btn__text {
     color: white;
     font-weight: bold;
@@ -346,9 +350,7 @@ p {
     transition: 0.5s all ease;
   }
 
-.swiper-button {
-    color: white;
-}
+
 
 /* Function Add to Cart */
 .cd-cart__trigger,
@@ -494,4 +496,33 @@ Usage: codyhouse.co/license
 }
 
 /* Nav */
+.nav {
+    height: 100vh;
+    width: 65vw;
+    position: absolute;
+    left: 0;
+    z-index: 6969;
+    background-color: white;
+    display: none;
+    transition: max-height 0.5s;
+}
 
+.nav__list {
+    list-style-type: none;
+    padding: 2.5rem;
+    text-decoration: none;
+}
+
+.nav-list__item {
+    font-size: var(--paragraph-font-size);
+    font-weight: 700;
+    margin-top: 1rem;
+    
+}
+
+.nav-list__item a {
+    text-decoration: none;
+    color: var(--dark-blue-color);
+}
+
+/* Blur */
