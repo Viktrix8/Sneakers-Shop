@@ -9,7 +9,7 @@ function showOnClick() {
 
 //initialising a variable name data
 
-var data = 0;
+var data = 1;
 
 //printing default value of data that is 0 in h2 tag
 document.getElementById("counter-label").innerText = data;
@@ -21,7 +21,7 @@ function increment() {
 }
 //creation of decrement function
 function decrement() {
-    if (data > 0) data -= 1;
+    if (data > 1) data -= 1;
     document.getElementById("counter-label").innerText = data;
 }
 
