@@ -10,6 +10,22 @@ body {
     margin: 0;
 }
 
+ 
+
+@media screen and (min-width: 937px ) {
+    body {
+        padding:2rem 15vw;
+        max-width: 100vw;
+        
+    }
+}
+
+@media screen and (min-width: 719px ) and (max-width: 937px) {
+    body {
+        padding: 5vh 5vw;
+    }
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -31,9 +47,9 @@ img {
     --light-grayish-blue-color: hsl(223, 64%, 98%);
     --white-color: hsl(0, 0%, 100%);
     --black-color:hsl(0, 0%, 0%);
-    --h1-font-size: 3rem;
+    --h1-font-size: 3.5rem;
     --h2-font-size: 2.6rem;
-    --paragraph-font-size: 1.6rem;
+    --paragraph-font-size: 1.8rem;
 }
 
 @media screen and (max-width: 658px) {
@@ -67,6 +83,7 @@ p {
     font-size: var(--paragraph-font-size);
     color: var(--dark-greyish-blue-color);
     margin: 0;
+    max-width: 50ch;
 }
 
 /* Hero */
@@ -315,22 +332,19 @@ p {
     height: 250px;
     background-color: white;
     border-radius: 10px;
-    z-index: 69;
+    z-index: 100;
     display: none;
-    transition:display .3s ease;
 
 }
 
 .cart__heading {
     font-weight: 600;
     color: var(--dark-blue-color);
-    transition: all .3s ease;
 }
 
 .cart__heading-div {
     border-bottom: 1px solid lightgray;
     padding: 2rem;
-    transition: all .3s ease;
 }
 
 .cart__items-div {
@@ -339,7 +353,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .3s all ease;
 }
 
 /* Swiper */
@@ -348,149 +361,19 @@ p {
     height: auto;
     transition: 0.5s all ease;
   }
-
-
-
 /* Function Add to Cart */
-.cd-cart__trigger,
-.cd-cart__content {
-  position: fixed;
-  bottom: 20px;
-  right: 5%;
-  transition: transform .2s;
-}
-
-.cd-cart--empty .cd-cart__trigger,
-.cd-cart--empty .cd-cart__content { /* Hide cart */
-  transform: translateY(150px);
-}
-
-.cd-cart__layout {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    overflow: hidden;
-    height: 72px;
-    width: 72px;
-    border-radius: var(--radius);
-    transition: height .4s .1s, width  .4s .1s, box-shadow .3s;
-    transition-timing-function: cubic-bezier(.67,.17,.32,.95);
-    background: var(--cd-color-3);
-    box-shadow: 0 4px 30px rgba(#000, .17);
-  }
-  
-  .cd-cart--open .cd-cart__layout {
-    height: 100%;
-    width: 100%;
-    transition-delay: 0s;
-  }
-
-  .cd-cart__product--deleted { 
-    position: absolute;
-    left: 0;
-    width: 100%; 
-    opacity: 0;
-    animation: cd-item-slide-out .3s forwards;
-  }
-  
-  @keyframes cd-item-slide-out {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(80px);
-      opacity: 0;
-    }
-  }
-
-  @media screen and (min-width: 658px) {
-
-  }
-
-  /* Cart */
-  /* -------------------------------- 
-
-File#: _2_cart-drawer
-Title: Cart Drawer
-Descr: A cart template in a drawer panel
-Usage: codyhouse.co/license
-
--------------------------------- */
-.dr-cart__product {
-    display: grid;
-    grid-template-columns: 80px 1fr auto;
-    grid-gap: var(--space-xs);
-    align-items: start;
-    padding: var(--space-sm) 0;
-  }
-  .dr-cart__product:not(:last-child) {
-    border-bottom: 1px solid var(--color-contrast-lower);
-  }
-  
-  .dr-cart__img {
-    display: block;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    transition: 0.2s;
-  }
-  .dr-cart__img img {
-    display: block;
-  }
-  .dr-cart__img:hover {
-    opacity: 0.85;
-  }
-  
-  .dr-cart__select {
-    --select-icon-size: 0.85em;
-    --select-icon-right-margin: var(--space-xxs);
-    font-size: 0.875em;
-    width: 3.6em;
-  }
-  .dr-cart__select .select__input {
-    padding: var(--space-xxxxs) var(--space-xxxs);
-  }
-  
-  .dr-cart__remove-btn {
-    background-color: transparent;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    color: inherit;
-    line-height: inherit;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    font-size: var(--text-sm);
-    color: var(--color-primary);
-    cursor: pointer;
-  }
-  .dr-cart__remove-btn:hover {
-    text-decoration: underline;
-  }
-  .dr-cart__remove-btn:focus {
-    outline: 2px solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
-    outline-offset: 2px;
-  }
-
-  .cd-cart__trigger,
-.cd-cart__content {
-  position: fixed;
-  bottom: 20px;
-  right: 5%;
-  transition: transform .2s;
-}
-
 
 @media screen and (min-width: 937px) {
     /* Grid */
     .grid {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
+        justify-items: start;
+        align-items: start;
+        column-gap: 5vw;
     }
 }
 
@@ -524,4 +407,69 @@ Usage: codyhouse.co/license
     color: var(--dark-blue-color);
 }
 
-/* Blur */
+.hero__image-normal {
+    display: none;
+}
+
+/* Responsivity */
+@media screen and (min-width: 937px) {
+    /* Header */
+    .header__menu {
+        display: none;
+    }
+
+    .header {
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 10rem;
+    }
+
+    .hero .hero__image-normal  {
+        width: 469px;
+        height: 469px;
+        display: block;
+        border-radius: 10px;
+        object-fit: cover;
+        
+    }
+
+    .hero__image {
+        display: none;
+    }
+
+    /* Swiper */
+    .swiper {
+        display: none;
+    }
+
+    /* Tagline */
+    .main__tagline {
+        padding-top: 3.7rem;
+    }
+
+    /* Price section */
+    .price-section__old-price {
+    top: 5.2rem;
+    left: 0;
+    }
+
+    .cart-amount {
+        margin-top:4rem;
+    }
+
+    
+    
+}
+
+@media screen and (min-width: 1581px) and (max-width: 1899px) {
+    .grid {
+        column-gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .grid {
+        column-gap: 0;
+        justify-items: center;
+        align-items: center;
+    }
+}
