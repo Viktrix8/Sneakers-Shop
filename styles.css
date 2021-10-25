@@ -266,12 +266,6 @@ p {
     border: 1px solid var(--primary-color);
 }
 
-.minus-div {
-    height: 100%;
-
-    width: 30%;
-}
-
 /* Header */
 
 .header {
