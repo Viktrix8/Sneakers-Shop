@@ -370,7 +370,7 @@ p {
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 100px;
         justify-items: start;
         align-items: start;
         column-gap: 5vw;
@@ -407,7 +407,7 @@ p {
     color: var(--dark-blue-color);
 }
 
-.hero__image-normal {
+.hero__image-normal .main-image {
     display: none;
 }
 
@@ -423,8 +423,8 @@ p {
         margin-bottom: 10rem;
     }
 
-    .hero .hero__image-normal  {
-        width: 469px;
+    body .hero .hero__image-normal .main-image  {
+        width: 100%;
         height: 469px;
         display: block;
         border-radius: 10px;
@@ -434,6 +434,10 @@ p {
 
     .hero__image {
         display: none;
+    }
+
+    .hero__image-normal {
+        border-radius: 10px;
     }
 
     /* Swiper */
@@ -471,10 +475,65 @@ p {
         margin: 0;
     }
 
-    
-    
+    /* Grid */
+    .grid {
+        row-gap: 5rem;
+    }
 
+    .grid-column-one {
+        width: auto;
+        height: 100%;
+        justify-self: start;
+        align-self: start;
+        
+        
+    }
+
+    .grid-column-three img{
+        width: auto;
+        height: 100px;
+        margin-right: 1.5rem;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .grid-column-three {
+        justify-self: start;
+        align-self:start ;
+    }
+
+    #image1 {
+        border: 2px solid var(--primary-color);
+        filter: grayscale(50%);
+        filter: blur(0.5px);
+    }
     
+     .image-group {
+        display: none;
+    }
+
+    .cart-amount {
+        display: inline-block;
+    }
+
+    /* Btn */
+    body .btn__cart {
+        width: 15vw;
+        position: relative;
+        top: 1rem;
+        left: 1rem;
+        display: inline-block;
+        
+    }
+
+    body .btn__text {
+        position: relative;
+        top: -1rem;
+    }
+
+    .main-image {
+        display: inline-block;
+    }
     
 }
 
@@ -489,5 +548,15 @@ p {
         column-gap: 0;
         justify-items: center;
         align-items: center;
+    }
+
+    .grid-column-one {
+        justify-self: end;
+        align-self: start;
+    }
+
+    .grid-column-three {
+        justify-self: end;
+        align-self: start;
     }
 }

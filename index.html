@@ -44,7 +44,10 @@
     <div class="grid" onclick="hideNav ()">
       <div class="grid-column-one">
         <div class="hero">
-          <img class="hero__image hero__image-normal" src="images/image-product-1.jpg" alt="An image of sneakers.">
+          <img class="image-group hero__image-normal hero__image-normal main-image" id="image1-big" src="images/image-product-1.jpg" alt="An image of sneakers.">
+          <img class="image-group hero__image-normal " id="image2-big"src="images/image-product-2.jpg" alt="">
+          <img class="image-group hero__image-normal " id="image3-big"src="images/image-product-3.jpg" alt="">
+          <img class="image-group hero__image-normal " id="image4-big" src="images/image-product-4.jpg" alt="">
             <!-- Slider main container -->
       <div class="swiper">
         <!-- Additional required wrapper -->
@@ -94,6 +97,12 @@
             </div>
         </section>
     </article>
+    </div>
+    <div class="grid-column-three">
+      <img onclick="borderImage1()" id="image1"  src="images/image-product-1.jpg" alt="">
+      <img id="image2" onclick="borderImage2 ()" src="images/image-product-2.jpg" alt="">
+      <img id="image3" onclick="borderImage3 ()" src="images/image-product-3.jpg" alt="">
+      <img id="image4" onclick="borderImage4 ()" src="images/image-product-4.jpg" alt="">
     </div>
     </div>
   </div>
