@@ -3,6 +3,7 @@
 **About**
 Website called Sneakers Shop. *Idea by https://www.frontendmentor.io/home.*
 *Programmed By Me.*
+Site is not colmpleted yet.
 
 
 **Languages Used**
