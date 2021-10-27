@@ -1,13 +1,4 @@
-function showOnClick() {
-    var x = document.getElementById("cart");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
 
-//initialising a variable name data
 
 var data = 1;
 
@@ -62,10 +53,10 @@ function hideNav() {
 
 function showCart() {
     let x = document.getElementById('cart');
-    if (x.style.display === 'none')
-        x.style.display = 'block';
+    if (x.style.display === 'block')
+        x.style.display = 'none';
     else
-        x.style.display = 'none'
+        x.style.display = 'block'
 }
 
 function borderImage1() {

@@ -20,7 +20,7 @@
 </head>
 <body>
   <header class="header">
-    <nav class="nav" id="header-nav">
+    <nav class="nav nav-mobile" id="header-nav">
       <ul class="nav__list">
         <li class="nav-list__item"><a href="#">Collections</a></li>
         <li class="nav-list__item"><a href="#">Men</a></li>
@@ -29,6 +29,15 @@
         <li class="nav-list__item"><a href="#">Contact</a></li>
       </ul>
     </nav>
+      <nav class="nav-desktop">
+        <ul>
+          <li class="nav__list-item"><a href="#">Collections</a></li>
+          <li class="nav__list-item"><a href="#">Men</a></li>
+          <li class="nav__list-item"><a href="#">Woman</a></li>
+          <li class="nav__list-item"><a href="#">About</a></li>
+          <li class="nav__list-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
       <img onclick="showNav()" class="header__menu" src="images/icon-menu.svg" alt="">
       <img class="header__logo" src="images/logo.svg" alt="">
       <box-icon  onclick="showCart()" class="header__icon" name="cart"></box-icon>
@@ -37,8 +46,8 @@
           <div class="cart__heading-div">
               <p class="cart__heading">Cart</p>
           </div>
-          <div class="cart__items-div">
-              <p class="cart__text" >Your Cart is Empty</p>
+          <div class="cart__items">
+              <p class="cart__text" >Your Cart is E</p>
           </div>
   </header>
     <div class="grid" onclick="hideNav ()">
